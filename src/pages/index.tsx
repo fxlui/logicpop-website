@@ -1,10 +1,13 @@
-import type { NextPage } from 'next'
-import HomeView from '../views/HomeView'
 import Head from 'next/head'
+import type { NextPage } from 'next'
+
+import HomeView from '../views/HomeView'
+import AboutView from '../views/AboutView'
+import ContactView from '../views/ContactView'
 
 const Home: NextPage = () => {
   return (
-    <div className="h-screen w-screen">
+    <div className="w-full">
       <Head>
         <title>logicpop</title>
         <meta name="description" content="Logicpop website" />
@@ -12,8 +15,8 @@ const Home: NextPage = () => {
       </Head>
 
       <HomeView />
-
-      <footer></footer>
+      <AboutView />
+      <ContactView />
     </div>
   )
 }
