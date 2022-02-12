@@ -19,6 +19,10 @@ module.exports = {
         secondary: '#969696',
         'text-secondary': '#636363'
       },
+      width: {
+        160: '40rem',
+        240: '60rem'
+      },
       borderRadius: {
         card: '30px'
       }

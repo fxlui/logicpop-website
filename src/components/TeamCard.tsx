@@ -1,6 +1,4 @@
-import { FC, useState } from 'react'
-import { View } from '../types'
-import clsx from 'clsx'
+import { FC } from 'react'
 
 const TeamCard: FC<{
   name: string
@@ -8,11 +6,19 @@ const TeamCard: FC<{
   description: string
 }> = ({ name, photo, description }) => {
   return (
-    <div className="flex flex-col justify-center items-center bg-bg-card rounded-card h-80 w-48 xl:w-52 transition-transform ease-in-out duration-300 hover:scale-105">
-      <div className="rounded-full bg-neutral-400 w-36 h-36" />
-      <p className="font-medium mt-4 mb-2 text-2xl">{name}</p>
-      <p className="font-medium text-xl text-secondary">{description}</p>
-      <p className="font-medium text-xl text-secondary">{description}</p>
+    <div className="team-card">
+      <div className="flex-1 flex justify-center items-center">
+        <div className="rounded-full bg-neutral-400 w-16 h-16" />
+      </div>
+      <div className="flex-1 flex flex-col items-center pr-10 md:pr-0">
+        <p className="font-medium mt-4 mb-2 text-xl lg:text-3xl">{name}</p>
+        <p className="font-medium text-lg lg:text-2xl text-secondary">
+          {description}
+        </p>
+        <p className="font-medium text-lg lg:text-2xl text-secondary">
+          {description}
+        </p>
+      </div>
     </div>
   )
 }
