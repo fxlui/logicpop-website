@@ -47,7 +47,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full snap-y snap-mandatory h-screen overflow-y-scroll">
       <Head>
         <title>logicpop</title>
         <meta name="description" content="Logicpop website" />
