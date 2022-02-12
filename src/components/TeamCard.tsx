@@ -10,7 +10,7 @@ const TeamCard: FC<{
     <div className="team-card">
       <div className="flex flex-1 justify-center items-center ml-3 lg:ml-0 lg:mt-8">
         <div className="rounded-full bg-primary h-28 w-28 md:h-32 md:w-32 lg:h-36 lg:w-36 overflow-clip">
-          <Image src={photo} />
+          <Image src={photo} alt={name} />
         </div>
       </div>
       <div className="flex flex-1 flex-col justify-center items-center mr-2 lg:mr-0">

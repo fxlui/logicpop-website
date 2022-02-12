@@ -64,7 +64,7 @@ const Home: NextPage = () => {
       <DesktopMenu {...{ currentView, scrollToView }} />
 
       <div className="pointer-events-none fixed w-24 h-24 m-2 left-0 top-2">
-        <Image src={logo} alt="logo" />
+        <Image src={logo} alt="logo" priority={true} />
       </div>
 
       <ViewLayout
