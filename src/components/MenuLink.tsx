@@ -10,12 +10,16 @@ const MenuLink: FC<{
     <a
       href={href}
       onClick={onClick}
-      className={clsx('text-xl font-medium p-2', {
+      className={clsx('transition hover:text-primary text-xl font-medium p-2', {
         'text-label': !selected
       })}
     >
       {children}
-      <span className={clsx('text-primary ml-2', { invisible: !selected })}>
+      <span
+        className={clsx('ease-in-out text-primary ml-2', {
+          invisible: !selected
+        })}
+      >
         &#9679;
       </span>
     </a>

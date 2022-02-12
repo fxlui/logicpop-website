@@ -2,6 +2,8 @@ import { FC, MutableRefObject, useEffect } from 'react'
 
 import useOnScreen from '../hooks/useOnScreen'
 import ArrowDown from '../components/icons/ArrowDown'
+import Image from 'next/image'
+import logo from '../../public/logo.svg'
 
 const ViewLayout: FC<{
   setCurrentView: () => void
@@ -15,13 +17,15 @@ const ViewLayout: FC<{
   }, [isViewOnScreen, setCurrentView])
 
   return (
-    <div ref={viewRef} className="view-container">
+    <div ref={viewRef} className="view-container snap-center">
       <main className="main-container">{children}</main>
+      <div className="pointer-events-none fixed w-24 h-24 m-2 left-0 top-2">
+        <Image src={logo} />
+      </div>
       <div className="flex-shrink-0 flex flex-col items-center pb-4">
         {customFooter ?? (
           <>
-            <p className="text-label font-medium pb-2">SCROLL DOWN</p>
-            <ArrowDown className="w-6 h-6 stroke-label" />
+            <ArrowDown className="motion-safe:animate-bounce w-6 h-6 stroke-label" />
           </>
         )}
       </div>

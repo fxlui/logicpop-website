@@ -87,7 +87,7 @@ const Home: NextPage = () => {
 
       <ViewLayout
         viewRef={contactRef}
-        customFooter={<p>© 2021 logicpop. ABN 51 329 039 302</p>}
+        customFooter={<p>© 2022 logicpop. ABN 51 329 039 302</p>}
         setCurrentView={() => setCurrentView('CONTACT_US')}
       >
         <ContactView />
