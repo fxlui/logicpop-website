@@ -1,6 +1,3 @@
-import ViewLayout from '../components/ViewLayout'
-import ArrowDown from '../components/icons/ArrowDown'
-
 function HomeView() {
   return (
     <>
