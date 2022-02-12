@@ -12,6 +12,9 @@ import ViewLayout from '../components/ViewLayout'
 import MobileMenu from '../components/MobileMenu'
 import DesktopMenu from '../components/DesktopMenu'
 
+import Image from 'next/image'
+import logo from '../../public/logo.svg'
+
 const Home: NextPage = () => {
   // right now this state will trigger rerender frequently since it's in the root
   // TODO: use somthing like zustand instead
@@ -50,12 +53,19 @@ const Home: NextPage = () => {
     <div className="w-full snap-y snap-mandatory h-screen overflow-y-scroll">
       <Head>
         <title>logicpop</title>
-        <meta name="description" content="Logicpop website" />
+        <meta
+          name="description"
+          content="logicpop builds innovative software solutions to real problems."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <MobileMenu {...{ currentView, scrollToView }} />
       <DesktopMenu {...{ currentView, scrollToView }} />
+
+      <div className="pointer-events-none fixed w-24 h-24 m-2 left-0 top-2">
+        <Image src={logo} alt="logo" />
+      </div>
 
       <ViewLayout
         viewRef={homeRef}
