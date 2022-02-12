@@ -1,34 +1,13 @@
-import { FC, useState } from 'react'
+import type { FC } from 'react'
 import { View } from '../types'
-import clsx from 'clsx'
-
-const MenuLink: FC<{
-  selected: boolean
-  href: string
-  onClick: () => void
-}> = ({ href, onClick, selected, children }) => {
-  return (
-    <a
-      href={href}
-      onClick={onClick}
-      className={clsx('text-xl font-medium p-2', {
-        'text-label': !selected
-      })}
-    >
-      {children}
-      <span className={clsx('text-primary ml-2', { invisible: !selected })}>
-        &#9679;
-      </span>
-    </a>
-  )
-}
+import MenuLink from './MenuLink'
 
 const DesktopMenu: FC<{
   currentView: View
   scrollToView: (view: View) => void
 }> = ({ currentView, scrollToView }) => {
   return (
-    <div className="flex flex-col items-end p-8 fixed top-0 right-0">
+    <div className="hidden md:flex flex-col items-end p-8 fixed top-0 right-0">
       <MenuLink
         href="#home"
         selected={currentView === 'HOME'}
