@@ -1,11 +1,15 @@
 import TeamCard from '../components/TeamCard'
 
+import eric from '../../public/images/eric.png'
+import james from '../../public/images/james.png'
+import richard from '../../public/images/richard.png'
+
 function TeamView() {
   return (
     <div className="flex flex-col lg:flex-row justify-center">
-      <TeamCard name="James Wong" photo="a" description="gamer" />
-      <TeamCard name="Eric Liu" photo="a" description="gamer" />
-      <TeamCard name="Richard Zhu" photo="a" description="gamer" />
+      <TeamCard name="James Wong" photo={james} description="business" />
+      <TeamCard name="Eric Liu" photo={eric} description="design" />
+      <TeamCard name="Richard Zhu" photo={richard} description="technical" />
     </div>
   )
 }
