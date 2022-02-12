@@ -15,7 +15,11 @@ module.exports = {
         unfocused: '#999999', // eg. unselected menu link
         label: '#808080',
         'bg-card': '#f8f8f8',
-        'bg-wash': '#abc8ff'
+        'bg-wash': '#abc8ff',
+        secondary: '#969696'
+      },
+      borderRadius: {
+        card: '48px'
       }
     }
   },
