@@ -16,6 +16,9 @@ const MenuLink: FC<{
       })}
     >
       {children}
+      <span className={clsx('text-primary ml-2', { invisible: !selected })}>
+        &#9679;
+      </span>
     </a>
   )
 }

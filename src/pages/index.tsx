@@ -1,11 +1,13 @@
 import Head from 'next/head'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import type { NextPage } from 'next'
 
 import type { View } from '../types'
 import DesktopMenu from '../components/DesktopMenu'
 import HomeView from '../views/HomeView'
 import AboutView from '../views/AboutView'
+import TeamView from '../views/TeamView'
+import WorkView from '../views/WorkView'
 import ViewLayout from '../components/ViewLayout'
 import ContactView from '../views/ContactView'
 
@@ -20,8 +22,11 @@ const Home: NextPage = () => {
 
   function scrollToView(view: View) {
     setCurrentView(view)
+  }
+
+  useEffect(() => {
     const option: ScrollIntoViewOptions = { behavior: 'smooth' }
-    switch (view) {
+    switch (currentView) {
       case 'HOME':
         homeRef.current?.scrollIntoView(option)
         break
@@ -40,7 +45,7 @@ const Home: NextPage = () => {
       default:
         break
     }
-  }
+  }, [currentView])
 
   return (
     <div className="w-full">
@@ -56,9 +61,24 @@ const Home: NextPage = () => {
         <HomeView />
       </ViewLayout>
 
-      <AboutView />
+      <ViewLayout viewRef={aboutRef}>
+        <AboutView />
+      </ViewLayout>
 
-      <ContactView />
+      <ViewLayout viewRef={teamRef}>
+        <TeamView />
+      </ViewLayout>
+
+      <ViewLayout viewRef={workRef}>
+        <WorkView />
+      </ViewLayout>
+
+      <ViewLayout
+        viewRef={contactRef}
+        customFooter={<p>© 2021 logicpop. ABN 51 329 039 302</p>}
+      >
+        <ContactView />
+      </ViewLayout>
     </div>
   )
 }
