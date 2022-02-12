@@ -27,9 +27,9 @@ const MobileMenu: FC<{
   scrollToView: (view: View) => void
 }> = ({ currentView, scrollToView }) => {
   return (
-    <div className="block lg:hidden fixed top-10 right-10 z-10">
+    <div className="block lg:hidden fixed top-10 right-10 z-10 focus:outline-none border-0">
       <Menu as="div" className="relative inline-block">
-        <Menu.Button className="p-2 inline-flex font-medium text-lg flex-row items-center">
+        <Menu.Button className="p-2 inline-flex font-medium text-lg flex-row items-center focus:outline-none border-0">
           {mobileMenuText(currentView)}
           <Hamburger className="stroke-primary w-6 h-6 ml-2" />
         </Menu.Button>
@@ -42,7 +42,7 @@ const MobileMenu: FC<{
           leaveFrom="transform scale-100 opacity-100"
           leaveTo="transform scale-95 opacity-0"
         >
-          <Menu.Items className="absolute w-48 -top-5 right-0 flex flex-col rounded-2xl bg-bg-card items-end py-2 pl-6 pr-2">
+          <Menu.Items className="absolute w-48 -top-5 right-0 flex flex-col rounded-2xl bg-bg-card items-end py-2 pl-6 pr-2 focus:outline-none border-0">
             <Menu.Item>
               <MenuLink
                 href="#home"

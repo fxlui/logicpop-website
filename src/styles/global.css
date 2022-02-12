@@ -4,7 +4,7 @@
 
 @layer components {
   .view-container {
-    @apply h-screen h-screen-ios flex flex-col items-center;
+    @apply h-screen flex flex-col items-center;
   }
   .main-container {
     @apply flex-1 flex flex-col justify-center items-center;
@@ -16,4 +16,10 @@
 
 a {
   @apply hover:text-primary transition-colors ease-in-out;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height: -webkit-fill-available;
+  }
 }

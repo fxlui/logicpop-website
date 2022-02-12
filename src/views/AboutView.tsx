@@ -1,7 +1,7 @@
 function AboutView() {
   return (
     <>
-      <div className="px-2 md:px-0 max-w-md md:max-w-xl text-lg md:text-xl lg:text-2xl font-medium">
+      <div className="px-6 md:px-2 lg:px-0 max-w-md md:max-w-xl text-lg md:text-xl lg:text-2xl font-medium">
         <p>logicpop builds innovative software solutions to real problems.</p>
         <br />
         <p>
