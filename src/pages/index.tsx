@@ -9,6 +9,7 @@ import TeamView from '../views/TeamView'
 import AboutView from '../views/AboutView'
 import ContactView from '../views/ContactView'
 import ViewLayout from '../components/ViewLayout'
+import MobileMenu from '../components/MobileMenu'
 import DesktopMenu from '../components/DesktopMenu'
 
 const Home: NextPage = () => {
@@ -53,6 +54,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <MobileMenu {...{ currentView, scrollToView }} />
       <DesktopMenu {...{ currentView, scrollToView }} />
 
       <ViewLayout
