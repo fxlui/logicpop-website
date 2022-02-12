@@ -18,6 +18,10 @@ module.exports = {
         'bg-wash': '#abc8ff',
         secondary: '#969696'
       },
+      width: {
+        160: '40rem',
+        240: '60rem'
+      },
       borderRadius: {
         card: '48px'
       }
