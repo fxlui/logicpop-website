@@ -27,7 +27,7 @@ const MobileMenu: FC<{
   scrollToView: (view: View) => void
 }> = ({ currentView, scrollToView }) => {
   return (
-    <div className="block md:hidden fixed top-10 right-10">
+    <div className="block lg:hidden fixed top-10 right-10 z-10">
       <Menu as="div" className="relative inline-block">
         <Menu.Button className="p-2 inline-flex font-medium text-lg flex-row items-center">
           {mobileMenuText(currentView)}

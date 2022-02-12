@@ -16,10 +16,11 @@ module.exports = {
         label: '#808080',
         'bg-card': '#f8f8f8',
         'bg-wash': '#abc8ff',
-        secondary: '#969696'
+        secondary: '#969696',
+        'text-secondary': '#636363'
       },
       borderRadius: {
-        card: '48px'
+        card: '30px'
       }
     }
   },

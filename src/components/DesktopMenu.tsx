@@ -7,7 +7,7 @@ const DesktopMenu: FC<{
   scrollToView: (view: View) => void
 }> = ({ currentView, scrollToView }) => {
   return (
-    <div className="hidden md:flex flex-col items-end p-8 fixed top-0 right-0">
+    <div className="hidden lg:flex flex-col items-end p-8 fixed top-0 right-0">
       <MenuLink
         href="#home"
         selected={currentView === 'HOME'}
