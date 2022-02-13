@@ -130,6 +130,7 @@ function WorkView() {
           </div>
         </Dialog>
       </Transition>
+      <div className="h-8 md:hidden" />
       {projects.map((project: Project) => (
         <ProjectCard
           key={project.name}

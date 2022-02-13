@@ -6,7 +6,7 @@ import richard from '../../public/images/richard.png'
 
 function TeamView() {
   return (
-    <div className="flex flex-col lg:flex-row justify-center">
+    <div className="flex flex-col lg:flex-row justify-center mt-8 md:mt-0">
       <TeamCard name="James Wong" photo={james} description="business" />
       <TeamCard name="Eric Liu" photo={eric} description="design" />
       <TeamCard name="Richard Zhu" photo={richard} description="technical" />
