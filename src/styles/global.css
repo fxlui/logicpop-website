@@ -12,10 +12,13 @@
   .team-card {
     @apply m-3 flex flex-row lg:flex-col justify-center items-center bg-bg-card rounded-card w-72 h-36 md:w-96 md:h-48 lg:w-60 lg:h-80;
   }
+  .link {
+    @apply transition-colors ease-in-out hover:stroke-primary hover:text-primary;
+  }
 }
 
 a {
-  @apply hover:text-primary transition-colors ease-in-out;
+  @apply link;
 }
 
 @supports (-webkit-touch-callout: none) {

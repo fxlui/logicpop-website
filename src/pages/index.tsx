@@ -63,12 +63,16 @@ const Home: NextPage = () => {
       <MobileMenu {...{ currentView, scrollToView }} />
       <DesktopMenu {...{ currentView, scrollToView }} />
 
-      <div className="pointer-events-none fixed w-24 h-24 m-2 left-0 top-2">
-        <Image src={logo} alt="logo" priority={true} />
-      </div>
+      <a
+        className="fixed w-24 h-24 m-2 left-0 top-2 hover:opacity-70 transition-opacity ease-in-out cursor-pointer"
+        onClick={() => scrollToView('HOME')}
+      >
+        <Image src={logo} alt="logicpop logo" priority={true} />
+      </a>
 
       <ViewLayout
         viewRef={homeRef}
+        scrollToNextView={() => scrollToView('ABOUT_US')}
         setCurrentView={() => setCurrentView('HOME')}
       >
         <HomeView />
@@ -76,6 +80,7 @@ const Home: NextPage = () => {
 
       <ViewLayout
         viewRef={aboutRef}
+        scrollToNextView={() => scrollToView('OUR_TEAM')}
         setCurrentView={() => setCurrentView('ABOUT_US')}
       >
         <AboutView />
@@ -83,6 +88,7 @@ const Home: NextPage = () => {
 
       <ViewLayout
         viewRef={teamRef}
+        scrollToNextView={() => scrollToView('OUR_WORK')}
         setCurrentView={() => setCurrentView('OUR_TEAM')}
       >
         <TeamView />
@@ -90,6 +96,7 @@ const Home: NextPage = () => {
 
       <ViewLayout
         viewRef={workRef}
+        scrollToNextView={() => scrollToView('CONTACT_US')}
         setCurrentView={() => setCurrentView('OUR_WORK')}
       >
         <WorkView />
