@@ -5,7 +5,7 @@ function AboutView() {
         <p>logicpop builds innovative software solutions to real problems.</p>
         <br />
         <p>
-          We are a small multi-talented team that are able to put on different
+          We are a small multi-talented team that is able to put on different
           hats, handling user interface designs to system implementations for
           all things web and mobile.
         </p>
