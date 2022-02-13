@@ -28,7 +28,7 @@ const MobileMenu: FC<{
 }> = ({ currentView, scrollToView }) => {
   return (
     <div className="block lg:hidden fixed top-10 right-10 z-10 focus:outline-none border-0">
-      <Menu as="div" className="relative inline-block">
+      <Menu as="nav" className="relative inline-block">
         <Menu.Button className="p-2 inline-flex font-medium text-lg flex-row items-center focus:outline-none border-0">
           {mobileMenuText(currentView)}
           <Hamburger className="stroke-primary w-6 h-6 ml-2" />
