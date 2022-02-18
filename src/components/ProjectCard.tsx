@@ -75,7 +75,8 @@ export const ProjectCard: FC<PCProps> = (project) => {
           alt={project.name}
           layout="fill"
           objectFit="cover"
-          className="rounded-card rounded-b-none md:rounded-br-card md:rounded-l-none "
+          className="rounded-card rounded-b-none md:rounded-br-card md:rounded-l-none"
+          priority
         />
       </div>
     </div>
