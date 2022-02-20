@@ -32,39 +32,33 @@ export const ProjectCard: FC<PCProps> = (project) => {
         <p className="md:hidden font-medium text-xl">{project.name}</p>
         <div className="hidden md:block md:space-y-4">
           <div>
-            <p className="font-medium text-md text-text-secondary">Project</p>
+            <p className="font-medium text-md text-secondary">Project</p>
             <p className="font-medium text-xl">{project.name}</p>
           </div>
           <div>
-            <p className="font-medium text-md text-text-secondary">Date</p>
+            <p className="font-medium text-md text-secondary">Date</p>
             <p className="font-medium text-xl">{project.date}</p>
           </div>
           {project.recognition ? (
             <div>
-              <p className="font-medium text-md text-text-secondary">
-                Recognition
-              </p>
+              <p className="font-medium text-md text-secondary">Recognition</p>
               <p className="font-medium text-xl">{project.recognition}</p>
             </div>
           ) : null}
           {project.platform ? (
             <div>
-              <p className="font-medium text-md text-text-secondary">
-                Platform
-              </p>
+              <p className="font-medium text-md text-secondary">Platform</p>
               <p className="font-medium text-xl">{project.platform}</p>
             </div>
           ) : null}
           {project.technology ? (
             <div>
-              <p className="font-medium text-md text-text-secondary">
-                Technology
-              </p>
+              <p className="font-medium text-md text-secondary">Technology</p>
               <p className="font-medium text-xl">{project.technology}</p>
             </div>
           ) : null}
           <div>
-            <p className="font-medium text-md text-text-secondary">Status</p>
+            <p className="font-medium text-md text-secondary">Status</p>
             <p className="font-medium text-xl">{project.status}</p>
           </div>
         </div>

@@ -70,45 +70,56 @@ const Home: NextPage = () => {
         <Image src={logo} alt="logicpop logo" priority={true} />
       </a>
 
-      <ViewLayout
-        viewRef={homeRef}
-        scrollToNextView={() => scrollToView('ABOUT_US')}
-        setCurrentView={() => setCurrentView('HOME')}
-      >
-        <HomeView />
-      </ViewLayout>
+      <main className="h-screen">
+        <ViewLayout
+          viewRef={homeRef}
+          scrollToNextView={() => scrollToView('ABOUT_US')}
+          setCurrentView={() => setCurrentView('HOME')}
+          tabIndex={0}
+        >
+          <HomeView />
+        </ViewLayout>
 
-      <ViewLayout
-        viewRef={aboutRef}
-        scrollToNextView={() => scrollToView('OUR_TEAM')}
-        setCurrentView={() => setCurrentView('ABOUT_US')}
-      >
-        <AboutView />
-      </ViewLayout>
+        <ViewLayout
+          viewRef={aboutRef}
+          scrollToNextView={() => scrollToView('OUR_TEAM')}
+          setCurrentView={() => setCurrentView('ABOUT_US')}
+          tabIndex={0}
+        >
+          <AboutView />
+        </ViewLayout>
 
-      <ViewLayout
-        viewRef={teamRef}
-        scrollToNextView={() => scrollToView('OUR_WORK')}
-        setCurrentView={() => setCurrentView('OUR_TEAM')}
-      >
-        <TeamView />
-      </ViewLayout>
+        <ViewLayout
+          viewRef={teamRef}
+          scrollToNextView={() => scrollToView('OUR_WORK')}
+          setCurrentView={() => setCurrentView('OUR_TEAM')}
+          tabIndex={0}
+        >
+          <TeamView />
+        </ViewLayout>
 
-      <ViewLayout
-        viewRef={workRef}
-        scrollToNextView={() => scrollToView('CONTACT_US')}
-        setCurrentView={() => setCurrentView('OUR_WORK')}
-      >
-        <WorkView />
-      </ViewLayout>
+        <ViewLayout
+          viewRef={workRef}
+          scrollToNextView={() => scrollToView('CONTACT_US')}
+          setCurrentView={() => setCurrentView('OUR_WORK')}
+          tabIndex={0}
+        >
+          <WorkView />
+        </ViewLayout>
 
-      <ViewLayout
-        viewRef={contactRef}
-        customFooter={<p>© 2022 logicpop. ABN 51 329 039 302</p>}
-        setCurrentView={() => setCurrentView('CONTACT_US')}
-      >
-        <ContactView />
-      </ViewLayout>
+        <ViewLayout
+          viewRef={contactRef}
+          customFooter={
+            <footer>
+              <p>© 2022 logicpop. ABN 51 329 039 302</p>
+            </footer>
+          }
+          setCurrentView={() => setCurrentView('CONTACT_US')}
+          tabIndex={0}
+        >
+          <ContactView />
+        </ViewLayout>
+      </main>
     </div>
   )
 }

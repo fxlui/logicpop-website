@@ -13,11 +13,10 @@ module.exports = {
         primary: '#1F93FF',
         focused: '#000000', // text color
         unfocused: '#999999', // eg. unselected menu link
-        label: '#808080',
+        label: '#585858',
         'bg-card': '#f8f8f8',
         'bg-wash': '#abc8ff',
-        secondary: '#969696',
-        'text-secondary': '#636363'
+        secondary: '#636363'
       },
       width: {
         160: '40rem',

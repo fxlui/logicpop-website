@@ -5,7 +5,8 @@ const MenuLink: FC<{
   selected: boolean
   href: string
   onClick: () => void
-}> = ({ href, onClick, selected, children }) => {
+  tabIndex: number
+}> = ({ href, onClick, selected, tabIndex, children }) => {
   return (
     <a
       href={href}
@@ -13,6 +14,7 @@ const MenuLink: FC<{
       className={clsx('transition hover:text-primary text-xl font-medium p-2', {
         'text-label': !selected
       })}
+      tabIndex={tabIndex}
     >
       {children}
       <span

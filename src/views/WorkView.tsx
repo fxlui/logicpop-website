@@ -61,7 +61,7 @@ function WorkView() {
                 <div className="py-6 px-6 w-72 md:w-64 flex flex-col justify-center">
                   <div className="block space-y-4">
                     <div>
-                      <p className="font-medium text-md text-text-secondary">
+                      <p className="font-medium text-md text-secondary">
                         Project
                       </p>
                       <p className="font-medium text-xl">
@@ -69,16 +69,14 @@ function WorkView() {
                       </p>
                     </div>
                     <div>
-                      <p className="font-medium text-md text-text-secondary">
-                        Date
-                      </p>
+                      <p className="font-medium text-md text-secondary">Date</p>
                       <p className="font-medium text-xl">
                         {activeProject.date}
                       </p>
                     </div>
                     {activeProject.recognition ? (
                       <div>
-                        <p className="font-medium text-md text-text-secondary">
+                        <p className="font-medium text-md text-secondary">
                           Recognition
                         </p>
                         <p className="font-medium text-xl">
@@ -88,7 +86,7 @@ function WorkView() {
                     ) : null}
                     {activeProject.platform ? (
                       <div>
-                        <p className="font-medium text-md text-text-secondary">
+                        <p className="font-medium text-md text-secondary">
                           Platform
                         </p>
                         <p className="font-medium text-xl">
@@ -98,7 +96,7 @@ function WorkView() {
                     ) : null}
                     {activeProject.technology ? (
                       <div>
-                        <p className="font-medium text-md text-text-secondary">
+                        <p className="font-medium text-md text-secondary">
                           Technology
                         </p>
                         <p className="font-medium text-xl">
@@ -107,7 +105,7 @@ function WorkView() {
                       </div>
                     ) : null}
                     <div>
-                      <p className="font-medium text-md text-text-secondary">
+                      <p className="font-medium text-md text-secondary">
                         Status
                       </p>
                       <p className="font-medium text-xl">

@@ -7,11 +7,15 @@ const DesktopMenu: FC<{
   scrollToView: (view: View) => void
 }> = ({ currentView, scrollToView }) => {
   return (
-    <nav className="hidden lg:flex flex-col items-end p-8 fixed top-0 right-0">
+    <nav
+      tabIndex={1}
+      className="hidden lg:flex flex-col items-end p-8 fixed top-0 right-0"
+    >
       <MenuLink
         href="#home"
         selected={currentView === 'HOME'}
         onClick={() => scrollToView('HOME')}
+        tabIndex={0}
       >
         Home
       </MenuLink>
@@ -19,6 +23,7 @@ const DesktopMenu: FC<{
         href="#about-us"
         selected={currentView === 'ABOUT_US'}
         onClick={() => scrollToView('ABOUT_US')}
+        tabIndex={0}
       >
         About Us
       </MenuLink>
@@ -26,6 +31,7 @@ const DesktopMenu: FC<{
         href="#our-team"
         selected={currentView === 'OUR_TEAM'}
         onClick={() => scrollToView('OUR_TEAM')}
+        tabIndex={0}
       >
         Our Team
       </MenuLink>
@@ -33,6 +39,7 @@ const DesktopMenu: FC<{
         href="#our-work"
         selected={currentView === 'OUR_WORK'}
         onClick={() => scrollToView('OUR_WORK')}
+        tabIndex={0}
       >
         Our Work
       </MenuLink>
@@ -40,6 +47,7 @@ const DesktopMenu: FC<{
         href="#contact-us"
         selected={currentView === 'CONTACT_US'}
         onClick={() => scrollToView('CONTACT_US')}
+        tabIndex={0}
       >
         Contact Us
       </MenuLink>
