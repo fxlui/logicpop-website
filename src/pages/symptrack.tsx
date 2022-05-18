@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useForm, ValidationError } from '@formspree/react'
 
 import Logo from '../../public/images/symptrack.svg'
 import VectorGraphics from '../../public/images/symptrack-vector.svg'
@@ -13,11 +14,7 @@ import LifeRing from '../components/icons/LifeRing'
 import Timer from '../components/icons/Timer'
 
 const SympTrack: NextPage = () => {
-  const [submitted, setSubmitted] = useState(false)
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setSubmitted(true)
-  }
+  const [state, handleSubmit] = useForm('meqnvdwy')
 
   return (
     <div className="flex">
@@ -88,9 +85,9 @@ const SympTrack: NextPage = () => {
                 <LifeRing className="fill-st-pink h-14 w-14" />
                 <p className="text-center text-xl">
                   Increased survival
-                  <p className="mx-2 mt-2 text-sm text-center">
+                  <span className="mx-2 mt-2 text-sm text-center">
                     by up to 6 months in cancer patients
-                  </p>
+                  </span>
                 </p>
               </div>
               <div className="st-benefit">
@@ -181,7 +178,7 @@ const SympTrack: NextPage = () => {
             for Australia.
           </h3>
           <div className="bg-white p-6 rounded-xl w-full max-w-3xl flex justify-center items-center">
-            {submitted ? (
+            {state.succeeded ? (
               <div className="text-center">
                 <h3 className="text-lg text-st-pink">Thank you!</h3>
                 <p className="text-sm text-st-text">
@@ -189,19 +186,18 @@ const SympTrack: NextPage = () => {
                 </p>
               </div>
             ) : (
-              <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                className="w-full"
-                onSubmit={handleSubmit}
-              >
-                <input type="hidden" name="form-name" value="contact" />
+              <form method="POST" className="w-full" onSubmit={handleSubmit}>
                 <div className="mb-6">
                   <label htmlFor="name" className="block mb-2 text-sm">
                     Your name
                   </label>
-                  <input type="text" id="name" className="form-box" required />
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="form-box"
+                    required
+                  />
                 </div>
                 <div className="mb-6">
                   <label htmlFor="email" className="block mb-2 text-sm">
@@ -210,6 +206,7 @@ const SympTrack: NextPage = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     className="form-box"
                     required
                   />
@@ -220,6 +217,7 @@ const SympTrack: NextPage = () => {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={4}
                     className="form-box"
                     placeholder="Demo / Early Access / Feedback"
@@ -229,6 +227,7 @@ const SympTrack: NextPage = () => {
                 <button
                   type="submit"
                   className="text-white transition-colors bg-st-pink hover:bg-neutral-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+                  disabled={state.submitting}
                 >
                   Submit
                 </button>
