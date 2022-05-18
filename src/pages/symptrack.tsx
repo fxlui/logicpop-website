@@ -111,8 +111,8 @@ const SympTrack: NextPage = () => {
           <div className="st-feature max-w-4xl">
             <div>
               <video className="st-video" autoPlay loop muted playsInline>
-                <source src="/videos/st-form.webm" type="video/webm" />
                 <source src="/videos/st-form.mp4" type="video/mp4" />
+                <source src="/videos/st-form.webm" type="video/webm" />
               </video>
             </div>
             <div className="st-feature-text">
@@ -134,8 +134,8 @@ const SympTrack: NextPage = () => {
             <div className="st-feature max-w-4xl pt-4 md:flex-row-reverse md:py-0">
               <div>
                 <video className="st-video" autoPlay loop muted playsInline>
-                  <source src="/videos/st-timeline.webm" type="video/webm" />
                   <source src="/videos/st-timeline.mp4" type="video/mp4" />
+                  <source src="/videos/st-timeline.webm" type="video/webm" />
                 </video>
               </div>
               <div className="st-feature-text">
@@ -155,8 +155,8 @@ const SympTrack: NextPage = () => {
           <div className="st-feature max-w-4xl pt-0 md:pt-5">
             <div className="md:mr-8">
               <video className="st-video" autoPlay loop muted playsInline>
-                <source src="/videos/st-analytics.webm" type="video/webm" />
                 <source src="/videos/st-analytics.mp4" type="video/mp4" />
+                <source src="/videos/st-analytics.webm" type="video/webm" />
               </video>
             </div>
             <div className="st-feature-text">
