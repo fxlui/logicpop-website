@@ -34,12 +34,12 @@ const SympTrack: NextPage = () => {
               <div className="text-[1.4rem] max-w-[17em]">
                 <h1>
                   Easy{' '}
-                  <span className="st-gradient">
+                  <span className="text-st-pink">
                     collection of patient symptoms
                   </span>{' '}
                   with translation into{' '}
-                  <span className="st-gradient">meaningful insights</span> for
-                  clinicians.
+                  <span className="text-st-orange">meaningful insights</span>{' '}
+                  for clinicians.
                 </h1>
               </div>
               <div className="flex flex-wrap max-w-sm gap-2 pb-8">
@@ -83,12 +83,12 @@ const SympTrack: NextPage = () => {
               </div>
               <div className="st-benefit">
                 <LifeRing className="fill-st-pink h-14 w-14" />
-                <p className="text-center text-xl">
-                  Increased survival
-                  <span className="mx-2 mt-2 text-sm text-center">
+                <div>
+                  <p className="text-center text-xl">Increased survival</p>
+                  <p className="mx-2 text-sm text-center">
                     by up to 6 months in cancer patients
-                  </span>
-                </p>
+                  </p>
+                </div>
               </div>
               <div className="st-benefit">
                 <Timer className="fill-st-pink h-14 w-14" />
@@ -112,6 +112,7 @@ const SympTrack: NextPage = () => {
             <div>
               <video className="st-video" autoPlay loop muted playsInline>
                 <source src="/videos/st-form.webm" type="video/webm" />
+                <source src="/videos/st-form.mp4" type="video/mp4" />
               </video>
             </div>
             <div className="st-feature-text">
@@ -134,6 +135,7 @@ const SympTrack: NextPage = () => {
               <div>
                 <video className="st-video" autoPlay loop muted playsInline>
                   <source src="/videos/st-timeline.webm" type="video/webm" />
+                  <source src="/videos/st-timeline.mp4" type="video/mp4" />
                 </video>
               </div>
               <div className="st-feature-text">
@@ -154,6 +156,7 @@ const SympTrack: NextPage = () => {
             <div className="md:mr-8">
               <video className="st-video" autoPlay loop muted playsInline>
                 <source src="/videos/st-analytics.webm" type="video/webm" />
+                <source src="/videos/st-analytics.mp4" type="video/mp4" />
               </video>
             </div>
             <div className="st-feature-text">
@@ -235,12 +238,10 @@ const SympTrack: NextPage = () => {
             )}
           </div>
         </div>
-        <div className="px-8 py-4 flex w-full justify-center text-neutral-400 max-w-full">
+        <footer className="px-8 py-4 flex w-full justify-center text-neutral-400 max-w-full">
           &copy; 2022 logicpop. ABN 51 329 039 302
-        </div>
+        </footer>
       </main>
-
-      <footer className="hidden">&copy; 2022 SympTrack</footer>
     </div>
   )
 }
