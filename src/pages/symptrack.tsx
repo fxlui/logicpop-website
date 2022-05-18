@@ -179,8 +179,7 @@ const SympTrack: NextPage = () => {
               a more digital healthcare
             </div>{' '}
             for Australia.
-          </h3>{' '}
-          {/* 
+          </h3>
           <div className="bg-white p-6 rounded-xl w-full max-w-3xl flex justify-center items-center">
             {submitted ? (
               <div className="text-center">
@@ -235,7 +234,7 @@ const SympTrack: NextPage = () => {
                 </button>
               </form>
             )}
-          </div>*/}
+          </div>
         </div>
         <div className="px-8 py-4 flex w-full justify-center text-neutral-400 max-w-full">
           &copy; 2022 logicpop. ABN 51 329 039 302
