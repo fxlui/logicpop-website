@@ -124,8 +124,8 @@ const SympTrack: NextPage = () => {
                 symptoms for patients to track in just a few seconds.
               </p>
               <p>
-                Let your patients to easily record their symptom details so that
-                they don&apos;t leave out critical information or repeat
+                Let your patients easily record their symptom details so that
+                they don&apos;t leave out critical information or have to repeat
                 themselves.
               </p>
             </div>
@@ -166,7 +166,7 @@ const SympTrack: NextPage = () => {
                 using our auto-generated graphs and analysis.
               </p>
               <p>
-                Customise key factors to monitor in patients records for a more
+                Customise key metrics to monitor in patients records for a more
                 personalised and accurate analysis.
               </p>
             </div>
