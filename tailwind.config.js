@@ -6,8 +6,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: 'Outfit, sans-serif',
-      symptrack: 'Quicksand, sans-serif'
+      sans: 'Outfit, sans-serif'
     },
     extend: {
       colors: {
@@ -30,6 +29,9 @@ module.exports = {
       },
       borderRadius: {
         card: '30px'
+      },
+      fontFamily: {
+        symptrack: 'Quicksand, sans-serif'
       }
     }
   },
