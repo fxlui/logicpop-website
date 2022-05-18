@@ -102,6 +102,7 @@ const SympTrack: NextPage = () => {
               <a
                 className="text-centerunderline opacity-50"
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.researchgate.net/publication/343793715_A_review_of_the_barriers_to_using_Patient-Reported_Outcomes_PROs_and_Patient-Reported_Outcome_Measures_PROMs_in_routine_cancer_care"
               >
                 Source
@@ -126,7 +127,8 @@ const SympTrack: NextPage = () => {
               </p>
               <p>
                 Let your patients to easily record their symptom details so that
-                they don't leave out critical information or repeat themselves.
+                they don&apos;t leave out critical information or repeat
+                themselves.
               </p>
             </div>
           </div>
@@ -140,7 +142,7 @@ const SympTrack: NextPage = () => {
               <div className="st-feature-text">
                 <h3 className="text-st-pink text-xl">Visual Timeline</h3>
                 <p>
-                  A simple, effective way to view a history of a patient's
+                  A simple, effective way to view a history of a patient&apos;s
                   records. Filter records by symptom, date or intensity.
                 </p>
                 <p>
