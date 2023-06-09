@@ -1,7 +1,7 @@
 import { FC, useState } from 'react'
 import { View } from '../types'
 import clsx from 'clsx'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { Dialog } from '@headlessui/react'
 
 export interface Project {
