@@ -14,8 +14,8 @@ function ContactView() {
             />
           </div>
         </div>
-        <p>
-          for enquiries, contact us at{' '}
+        <p className="px-2">
+          for enquiries, please contact us at{' '}
           <a href="mailto:hi@logicpop.com.au">hi@logicpop.com.au</a>
         </p>
       </div>
